@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  
+  <ion-item *ngFor="let item of items">
+    <ion-thumbnail>
+        <img src="{{item.data.thumbnail}}" item-left/>
+    </ion-thumbnail>
+    <span><ion-icon name="thumbs-up">&nbsp;{{item.data.score}} </ion-icon></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span><ion-icon name="chatboxes">&nbsp;{{item.data.num_comments}} </ion-icon></span> 
+     <span><button (click)="viewDetails(item)">view</button></span>
+  </ion-item>
+</ion-list>
+</ion-content>
